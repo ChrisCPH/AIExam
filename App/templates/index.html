@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huspriser</title>
+</head>
+<body>
+    <form action="/RF" method="post">
+        
+        <p>Vælg en boligtype:</p>
+        <label><input type="radio" name="Boligtype" value="Parcel" required="required" />Parcel-/rækkehus</label><br>
+        <label><input type="radio" name="Boligtype" value="Fritidshus" required="required" />Fritidshus</label><br>
+        <label><input type="radio" name="Boligtype" value="Ejerlejlighed" required="required" />Ejerlejlighed</label><br>
+
+        <p>Indtast kommune:</p>
+        <input type="text" name="Kommune" required="required" /><br>
+        
+        <p>Indtast år:</p>
+        <input type="number" name="År" required="required" /><br>
+        
+        <p>Indtast måned (som et tal):</p>
+        <input type="number" name="Måned" required="required" /><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p> {{ RF_result }} kr. pr. m2</p>
+    
+</body>
+</html>
